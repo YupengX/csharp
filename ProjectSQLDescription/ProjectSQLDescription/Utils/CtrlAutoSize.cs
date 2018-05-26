@@ -53,6 +53,10 @@ namespace ProjectSQLDescription.Utils
             newy = cons.Height / y;
             foreach (Control con in cons.Controls)
             {
+                if (con.Tag==null)//不知怎么出现了null
+                {
+                    continue;
+                }
                 string[] mytag = con.Tag.ToString().Split(new char[] { (':') });
                 float a = Convert.ToSingle(mytag[0]) * newx;
                 con.Width = (int)a;

@@ -32,9 +32,9 @@
             this.label_projectName = new System.Windows.Forms.Label();
             this.label_prjectDesc = new System.Windows.Forms.Label();
             this.groupBox_project = new System.Windows.Forms.GroupBox();
-            this.label_projectUserName = new System.Windows.Forms.Label();
-            this.textBox_projectUserName = new System.Windows.Forms.TextBox();
             this.richTextBox_projectDesc = new System.Windows.Forms.RichTextBox();
+            this.textBox_projectUserName = new System.Windows.Forms.TextBox();
+            this.label_projectUserName = new System.Windows.Forms.Label();
             this.groupBox_project.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,18 +51,18 @@
             this.label_projectName.AutoSize = true;
             this.label_projectName.Location = new System.Drawing.Point(97, 45);
             this.label_projectName.Name = "label_projectName";
-            this.label_projectName.Size = new System.Drawing.Size(29, 12);
+            this.label_projectName.Size = new System.Drawing.Size(53, 12);
             this.label_projectName.TabIndex = 1;
-            this.label_projectName.Text = "Name";
+            this.label_projectName.Text = "项目名称";
             // 
             // label_prjectDesc
             // 
             this.label_prjectDesc.AutoSize = true;
             this.label_prjectDesc.Location = new System.Drawing.Point(97, 124);
             this.label_prjectDesc.Name = "label_prjectDesc";
-            this.label_prjectDesc.Size = new System.Drawing.Size(65, 12);
+            this.label_prjectDesc.Size = new System.Drawing.Size(53, 12);
             this.label_prjectDesc.TabIndex = 2;
-            this.label_prjectDesc.Text = "Descrition";
+            this.label_prjectDesc.Text = "项目描述";
             // 
             // groupBox_project
             // 
@@ -77,24 +77,7 @@
             this.groupBox_project.Size = new System.Drawing.Size(449, 333);
             this.groupBox_project.TabIndex = 3;
             this.groupBox_project.TabStop = false;
-            this.groupBox_project.Text = "Project";
-            // 
-            // label_projectUserName
-            // 
-            this.label_projectUserName.AutoSize = true;
-            this.label_projectUserName.Location = new System.Drawing.Point(97, 84);
-            this.label_projectUserName.Name = "label_projectUserName";
-            this.label_projectUserName.Size = new System.Drawing.Size(53, 12);
-            this.label_projectUserName.TabIndex = 4;
-            this.label_projectUserName.Text = "UserName";
-            // 
-            // textBox_projectUserName
-            // 
-            this.textBox_projectUserName.Location = new System.Drawing.Point(168, 84);
-            this.textBox_projectUserName.Name = "textBox_projectUserName";
-            this.textBox_projectUserName.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox_projectUserName.Size = new System.Drawing.Size(154, 21);
-            this.textBox_projectUserName.TabIndex = 5;
+            this.groupBox_project.Text = "项目信息";
             // 
             // richTextBox_projectDesc
             // 
@@ -105,6 +88,23 @@
             this.richTextBox_projectDesc.Size = new System.Drawing.Size(305, 139);
             this.richTextBox_projectDesc.TabIndex = 6;
             this.richTextBox_projectDesc.Text = "";
+            // 
+            // textBox_projectUserName
+            // 
+            this.textBox_projectUserName.Location = new System.Drawing.Point(168, 84);
+            this.textBox_projectUserName.Name = "textBox_projectUserName";
+            this.textBox_projectUserName.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox_projectUserName.Size = new System.Drawing.Size(154, 21);
+            this.textBox_projectUserName.TabIndex = 5;
+            // 
+            // label_projectUserName
+            // 
+            this.label_projectUserName.AutoSize = true;
+            this.label_projectUserName.Location = new System.Drawing.Point(97, 84);
+            this.label_projectUserName.Name = "label_projectUserName";
+            this.label_projectUserName.Size = new System.Drawing.Size(41, 12);
+            this.label_projectUserName.TabIndex = 4;
+            this.label_projectUserName.Text = "添加人";
             // 
             // NewProject
             // 

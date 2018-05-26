@@ -75,6 +75,12 @@
     <Compile Include="UI\NewSql.Designer.cs">
       <DependentUpon>NewSql.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Setting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\CtrlAutoSize.cs" />
     <Compile Include="Utils\FileUtils.cs" />
     <Compile Include="Utils\JSONUtils.cs" />
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\NewSql.resx">
       <DependentUpon>NewSql.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

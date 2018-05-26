@@ -62,7 +62,15 @@ namespace ProjectSQLDescription.Utils
         public static List<FileInfo> getAllJSONFilesFromCurrentDir(string folderFullName)
         {
             DirectoryInfo TheFolder = new DirectoryInfo(folderFullName);
-            List<FileInfo> fileList = TheFolder.GetFiles().ToList<FileInfo>();
+            List<FileInfo> fileList = new List<FileInfo>();
+            try
+            {
+                fileList = TheFolder.GetFiles().ToList<FileInfo>();
+            }
+            catch (Exception)
+            {
+
+            }
             if (fileList != null && fileList.Count > 0)
             {
                 for (int i = 0;i< fileList.Count;i++)

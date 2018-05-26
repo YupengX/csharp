@@ -68,28 +68,28 @@
             this.newSQLToolStripMenuItem,
             this.fileSpaceToolStripMenuItem});
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(43, 21);
-            this.newToolStripMenuItem.Text = "new";
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.newToolStripMenuItem.Text = "文件";
             // 
             // newProjectToolStripMenuItem
             // 
             this.newProjectToolStripMenuItem.Name = "newProjectToolStripMenuItem";
             this.newProjectToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.newProjectToolStripMenuItem.Text = "new project";
+            this.newProjectToolStripMenuItem.Text = "添加项目";
             this.newProjectToolStripMenuItem.Click += new System.EventHandler(this.newProjectToolStripMenuItem_Click);
             // 
             // newSQLToolStripMenuItem
             // 
             this.newSQLToolStripMenuItem.Name = "newSQLToolStripMenuItem";
             this.newSQLToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.newSQLToolStripMenuItem.Text = "new SQL";
+            this.newSQLToolStripMenuItem.Text = "添加SQL";
             this.newSQLToolStripMenuItem.Click += new System.EventHandler(this.newSQLToolStripMenuItem_Click);
             // 
             // fileSpaceToolStripMenuItem
             // 
             this.fileSpaceToolStripMenuItem.Name = "fileSpaceToolStripMenuItem";
             this.fileSpaceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.fileSpaceToolStripMenuItem.Text = "file Space";
+            this.fileSpaceToolStripMenuItem.Text = "打开文件目录";
             this.fileSpaceToolStripMenuItem.Click += new System.EventHandler(this.fileSpaceToolStripMenuItem_Click);
             // 
             // toolsToolStripMenuItem
@@ -97,21 +97,21 @@
             this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(49, 21);
-            this.toolsToolStripMenuItem.Text = "tools";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.toolsToolStripMenuItem.Text = "工具";
             // 
             // settingToolStripMenuItem
             // 
             this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
-            this.settingToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.settingToolStripMenuItem.Text = "setting";
+            this.settingToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.settingToolStripMenuItem.Text = "设置";
             this.settingToolStripMenuItem.Click += new System.EventHandler(this.settingToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(54, 21);
-            this.aboutToolStripMenuItem.Text = "about";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.aboutToolStripMenuItem.Text = "关于";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // panel_tree

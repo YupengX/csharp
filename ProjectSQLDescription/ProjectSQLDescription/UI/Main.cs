@@ -28,24 +28,60 @@ namespace ProjectSQLDescription
         //加载工作目录下的json
         private void treeInit()
         {
-            string dataDir = "E:/Media/projectDir";
+            string dataDir = "D:/MyGitRes/projectDir";
             dic = mainService.getDicFromAllDirJsonFiles(dataDir);
             if (dic != null&& dic.Count>0)
             {
                 foreach (ProjectInfo project in dic.Values)
                 {
                     TreeNode treeNodeProject = new TreeNode(project.ProjectName);
-                    treeNodeProject.Name = project.ProjectName;
+                    treeNodeProject.Name = project.ProjectId;
                     treeNodeProject.Text = project.ProjectName;
                     foreach (SqlInfo sqlInfo in project.SqlList)
                     {
                         TreeNode treeNodeSql = new TreeNode(sqlInfo.SqlName);
-                        treeNodeSql.Name = sqlInfo.SqlName;
-                        treeNodeSql.Text = sqlInfo.SqlName;
+                        treeNodeSql.Name = sqlInfo.SqlId;
+                        treeNodeSql.Text = sqlInfo.SqlId;
                         treeNodeProject.Nodes.Add(treeNodeSql);
                     }
                     this.treeView1.Nodes.Add(treeNodeProject);
                     this.treeView1.ExpandAll();
+                    this.treeView1.MouseClick += Node_Click;
+                }
+            }
+        }
+        private void Node_Click(object sender, MouseEventArgs e)
+        {
+            if (e.Button==MouseButtons.Left)
+            {
+                TreeNode tn = this.treeView1.GetNodeAt(e.X, e.Y);
+                ProjectInfo selectedPro = null;
+                SqlInfo selectedSql = null;
+                if (tn != null)
+                {
+                    this.treeView1.SelectedNode = tn;
+                    if (tn.Parent!=null)
+                    {
+                        selectedPro = dic[tn.Parent.Name];
+                        selectedSql =  selectedPro.SqlList.Find(item =>
+                        {
+                            if (item.SqlId.Equals(tn.Name))
+                            {
+                                return true;
+                            }
+                            else
+                            {
+                                return false;
+                            }
+                        });
+                        MessageBox.Show(selectedSql.Sql);
+                    }
+                    else
+                    {
+                       selectedPro =  dic[tn.Name];
+                        MessageBox.Show(selectedPro.ProjectDescription);
+                    }
+                   
                 }
             }
         }
@@ -66,12 +102,14 @@ namespace ProjectSQLDescription
         //打开文件目录
         private void fileSpaceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("explorer.exe", "E:\\Media\\projectDir");
+            System.Diagnostics.Process.Start("explorer.exe", "D:/MyGitRes/projectDir");
         }
         //设置，如file 目录
         private void settingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Setting setting = new Setting();
+            this.panel_show.Controls.Clear();
+            this.panel_show.Controls.Add(setting);
         }
         //about
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
